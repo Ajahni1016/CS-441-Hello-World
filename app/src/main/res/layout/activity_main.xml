@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    TextView helloText;
-
     <TextView
         android:id="@+id/hello_text"
         android:layout_width="wrap_content"
@@ -29,8 +27,19 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!--    Back Button-->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp" />
+        android:onClick="onBackClick"/>
 
 <!--    Style Button-->
     <Button
@@ -41,7 +50,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="40dp"
+        android:onClick="onStyleClick"/>
 
 <!--    Color Button-->
 <Button
@@ -54,7 +64,7 @@
     app:layout_constraintRight_toRightOf="parent"
     android:layout_marginBottom="90dp"
     android:layout_marginStart="100dp"
-    android:layout_marginLeft="100dp" />
+    android:onClick="onColorClick"/>
 
 <!--    Font Button-->
 <Button
@@ -67,6 +77,72 @@
     app:layout_constraintRight_toRightOf="parent"
     android:layout_marginBottom="90dp"
     android:layout_marginEnd="100dp"
-    android:layout_marginRight="100dp" />
+    android:onClick="onFontClick"/>
+
+
+<!--    Color Screen   -->
+<TextView
+    android:id="@+id/color_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Gray"
+    android:textColor="@color/black"
+    android:textSize="40sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginBottom="90dp"/>
+
+
+<!--    Style Screen   -->
+<TextView
+    android:id="@+id/style_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Default"
+    android:textColor="@color/black"
+    android:textSize="40sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginBottom="90dp"/>
+
+
+<!--    Font Screen   -->
+<TextView
+    android:id="@+id/font_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Arial"
+    android:textColor="@color/black"
+    android:textSize="40sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginBottom="90dp"/>
+
+<!--    Right Arrow   -->
+<Button
+    android:id="@+id/right_arrow"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Next"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toRightOf="@+id/font_text"
+    android:layout_marginBottom="90dp"
+    android:layout_marginStart="40dp"/>
+
+<!--    Left Arrow   -->
+<Button
+    android:id="@+id/left_arrow"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Back"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/font_text"
+    android:layout_marginBottom="90dp"
+    android:layout_marginEnd="40dp"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
