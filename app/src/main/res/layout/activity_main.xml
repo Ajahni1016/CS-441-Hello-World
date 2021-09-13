@@ -69,12 +69,12 @@
     android:layout_marginLeft="100dp"
     android:layout_marginStart="100dp" />
 
-<!--    Font Button-->
+<!--    Size Button-->
 <Button
-    android:id="@+id/font_button"
+    android:id="@+id/size_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Font"
+    android:text="Size"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
@@ -90,7 +90,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Gray"
-    android:textColor="@color/black"
+    android:textColor="@color/white"
     android:textSize="40sp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
@@ -104,7 +104,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Default"
-    android:textColor="@color/black"
+    android:textColor="@color/white"
     android:textSize="40sp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
@@ -112,13 +112,13 @@
     android:layout_marginBottom="90dp"/>
 
 
-<!--    Font Screen   -->
+<!--    Size Screen   -->
 <TextView
-    android:id="@+id/font_text"
+    android:id="@+id/size_text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Arial"
-    android:textColor="@color/black"
+    android:text="Medium"
+    android:textColor="@color/white"
     android:textSize="40sp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
@@ -189,9 +189,9 @@
         android:layout_marginEnd="40dp"
         android:onClick="onLeftClick"/>
 
-    <!--    Font Right Arrow   -->
+    <!--    Size Right Arrow   -->
     <ImageButton
-        android:id="@+id/font_right_arrow"
+        android:id="@+id/size_right_arrow"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="40dp"
@@ -199,27 +199,26 @@
         android:background="@android:color/transparent"
         android:src="@drawable/ic_right"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/font_text"
+        app:layout_constraintLeft_toRightOf="@+id/size_text"
         tools:ignore="SpeakableTextPresentCheck"
         android:contentDescription="Right Arrow"
         android:layout_marginStart="40dp"
         android:onClick="onRightClick"/>
 
-    <!--    Font Left Arrow   -->
+    <!--    size Left Arrow   -->
     <ImageButton
-        android:id="@+id/font_left_arrow"
+        android:id="@+id/size_left_arrow"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="90dp"
         android:background="@android:color/transparent"
+        android:contentDescription="Left Arrow"
+        android:onClick="onLeftClick"
         android:src="@drawable/ic_left"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/font_text"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="Left Arrow"
-        android:layout_marginEnd="40dp"
-        android:onClick="onLeftClick"/>
+        app:layout_constraintRight_toLeftOf="@+id/size_text"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 

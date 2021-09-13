@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     TextView helloText;
     Button colorButton;
     Button styleButton;
-    Button fontButton;
+    Button sizeButton;
     Button startButton;
     Button backButton;
 
@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
     TextView colorText;
     ImageButton rightColorButton;
     ImageButton leftColorButton;
-    // Font Screen
-    TextView fontText;
-    ImageButton rightFontButton;
-    ImageButton leftFontButton;
+    // Size Screen
+    TextView sizeText;
+    ImageButton rightSizeButton;
+    ImageButton leftSizeButton;
     // Style Screen
     TextView styleText;
     ImageButton rightStyleButton;
@@ -40,18 +40,18 @@ public class MainActivity extends AppCompatActivity {
         helloText = findViewById(R.id.hello_text);
         colorButton = findViewById(R.id.color_button);
         styleButton = findViewById(R.id.style_button);
-        fontButton = findViewById(R.id.font_button);
+        sizeButton = findViewById(R.id.size_button);
         startButton = findViewById(R.id.start_button);
         backButton = findViewById(R.id.back_button);
-        rightFontButton = findViewById(R.id.font_right_arrow);
-        leftFontButton = findViewById(R.id.font_left_arrow);
+        rightSizeButton = findViewById(R.id.size_right_arrow);
+        leftSizeButton = findViewById(R.id.size_left_arrow);
         rightColorButton = findViewById(R.id.color_right_arrow);
         leftColorButton = findViewById(R.id.color_left_arrow);
         rightStyleButton = findViewById(R.id.style_right_arrow);
         leftStyleButton = findViewById(R.id.style_left_arrow);
         backButton.setVisibility(View.GONE);
-        rightFontButton.setVisibility(View.GONE);
-        leftFontButton.setVisibility(View.GONE);
+        rightSizeButton.setVisibility(View.GONE);
+        leftSizeButton.setVisibility(View.GONE);
         rightColorButton.setVisibility(View.GONE);
         leftColorButton.setVisibility(View.GONE);
         rightStyleButton.setVisibility(View.GONE);
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         colorText.setVisibility(View.GONE);
 
         // Font Screen
-        fontText = findViewById(R.id.font_text);
-        fontText.setVisibility(View.GONE);
+        sizeText = findViewById(R.id.size_text);
+        sizeText.setVisibility(View.GONE);
 
         // Style Screen
         styleText = findViewById(R.id.style_text);
@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     int ColorCounter = 1;
     int FontCounter = 1;
     int StyleCounter = 1;
+
 
     public void changeColor(View view){
         if(ColorCounter==1){
@@ -103,16 +104,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void changeFont(View view){
         if(FontCounter==1){
-//            helloText.setTextColor(Color.GRAY);
-            fontText.setText("Arial");
+            helloText.setTextSize(50);
+            sizeText.setText("Medium");
         }
         else if(FontCounter==2){
-//            helloText.setTextColor(Color.RED);
-            fontText.setText("Comic Sans");
+            helloText.setTextSize(70);
+            sizeText.setText("Large");
         }
         else if(FontCounter==3){
-//            helloText.setTypeface(Color.BLUE);
-            fontText.setText(" Times New\n     Roman ");
+            helloText.setTextSize(30);
+            sizeText.setText("Small");
         }
     }
 
@@ -197,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
     public void onColorClick(View view){
         ColorFontStyle = 1;
         colorButton.setVisibility(View.GONE);
-        fontButton.setVisibility(View.GONE);
+        sizeButton.setVisibility(View.GONE);
         styleButton.setVisibility(View.GONE);
         startButton.setVisibility(View.GONE);
         backButton.setVisibility(View.VISIBLE);
@@ -209,19 +210,19 @@ public class MainActivity extends AppCompatActivity {
     public void onFontClick(View view){
         ColorFontStyle = 2;
         colorButton.setVisibility(View.GONE);
-        fontButton.setVisibility(View.GONE);
+        sizeButton.setVisibility(View.GONE);
         styleButton.setVisibility(View.GONE);
         startButton.setVisibility(View.GONE);
         backButton.setVisibility(View.VISIBLE);
-        fontText.setVisibility(View.VISIBLE);
-        rightFontButton.setVisibility(View.VISIBLE);
-        leftFontButton.setVisibility(View.VISIBLE);
+        sizeText.setVisibility(View.VISIBLE);
+        rightSizeButton.setVisibility(View.VISIBLE);
+        leftSizeButton.setVisibility(View.VISIBLE);
     }
 
     public void onStyleClick(View view){
         ColorFontStyle = 3;
         colorButton.setVisibility(View.GONE);
-        fontButton.setVisibility(View.GONE);
+        sizeButton.setVisibility(View.GONE);
         styleButton.setVisibility(View.GONE);
         startButton.setVisibility(View.GONE);
         backButton.setVisibility(View.VISIBLE);
@@ -232,15 +233,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBackClick(View view){
         colorButton.setVisibility(View.VISIBLE);
-        fontButton.setVisibility(View.VISIBLE);
+        sizeButton.setVisibility(View.VISIBLE);
         styleButton.setVisibility(View.VISIBLE);
         startButton.setVisibility(View.VISIBLE);
         backButton.setVisibility(View.GONE);
         colorText.setVisibility(View.GONE);
-        fontText.setVisibility(View.GONE);
+        sizeText.setVisibility(View.GONE);
         styleText.setVisibility(View.GONE);
-        rightFontButton.setVisibility(View.GONE);
-        leftFontButton.setVisibility(View.GONE);
+        rightSizeButton.setVisibility(View.GONE);
+        leftSizeButton.setVisibility(View.GONE);
         rightColorButton.setVisibility(View.GONE);
         leftColorButton.setVisibility(View.GONE);
         rightStyleButton.setVisibility(View.GONE);
