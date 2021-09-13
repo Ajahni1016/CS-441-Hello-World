@@ -26,8 +26,9 @@
         android:text="Start\nThe show!"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp" />
 
     <!--    Back Button-->
     <Button
@@ -37,9 +38,10 @@
         android:text="Back"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="onBackClick"/>
+        android:onClick="onBackClick"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp" />
 
 <!--    Style Button-->
     <Button
@@ -63,8 +65,9 @@
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     android:layout_marginBottom="90dp"
-    android:layout_marginStart="100dp"
-    android:onClick="onColorClick"/>
+    android:onClick="onColorClick"
+    android:layout_marginLeft="100dp"
+    android:layout_marginStart="100dp" />
 
 <!--    Font Button-->
 <Button
@@ -76,8 +79,9 @@
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     android:layout_marginBottom="90dp"
-    android:layout_marginEnd="100dp"
-    android:onClick="onFontClick"/>
+    android:onClick="onFontClick"
+    android:layout_marginRight="100dp"
+    android:layout_marginEnd="100dp" />
 
 
 <!--    Color Screen   -->
@@ -121,27 +125,95 @@
     app:layout_constraintRight_toRightOf="parent"
     android:layout_marginBottom="90dp"/>
 
-<!--    Right Arrow   -->
-<Button
-    android:id="@+id/right_arrow"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Next"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toRightOf="@+id/font_text"
-    android:layout_marginBottom="90dp"
-    android:layout_marginStart="40dp"/>
+<!--    Color Right Arrow   -->
+    <ImageButton
+        android:id="@+id/color_right_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="90dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/color_text"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="Right Arrow"
+        android:layout_marginStart="40dp" />
 
-<!--    Left Arrow   -->
-<Button
-    android:id="@+id/left_arrow"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Back"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintRight_toLeftOf="@+id/font_text"
-    android:layout_marginBottom="90dp"
-    android:layout_marginEnd="40dp"/>
+<!--    Color Left Arrow   -->
+    <ImageButton
+        android:id="@+id/color_left_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="90dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/color_text"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="Left Arrow"
+        android:layout_marginEnd="40dp" />
+
+    <!--    Style Right Arrow   -->
+    <ImageButton
+        android:id="@+id/style_right_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="90dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/style_text"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="Right Arrow"
+        android:layout_marginStart="40dp" />
+
+    <!--    Style Left Arrow   -->
+    <ImageButton
+        android:id="@+id/style_left_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="90dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/style_text"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="Left Arrow"
+        android:layout_marginEnd="40dp" />
+
+    <!--    Font Right Arrow   -->
+    <ImageButton
+        android:id="@+id/font_right_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="90dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/font_text"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="Right Arrow"
+        android:layout_marginStart="40dp" />
+
+    <!--    Font Left Arrow   -->
+    <ImageButton
+        android:id="@+id/font_left_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="90dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/font_text"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="Left Arrow"
+        android:layout_marginEnd="40dp" />
 
 
 

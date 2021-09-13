@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,14 +16,19 @@ public class MainActivity extends AppCompatActivity {
     Button fontButton;
     Button startButton;
     Button backButton;
-    Button rightButton;
-    Button leftButton;
+
     // Color Screen
     TextView colorText;
+    ImageButton rightColorButton;
+    ImageButton leftColorButton;
     // Font Screen
     TextView fontText;
+    ImageButton rightFontButton;
+    ImageButton leftFontButton;
     // Style Screen
     TextView styleText;
+    ImageButton rightStyleButton;
+    ImageButton leftStyleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +41,19 @@ public class MainActivity extends AppCompatActivity {
         fontButton = findViewById(R.id.font_button);
         startButton = findViewById(R.id.start_button);
         backButton = findViewById(R.id.back_button);
-        rightButton = findViewById(R.id.right_arrow);
-        leftButton = findViewById(R.id.left_arrow);
+        rightFontButton = findViewById(R.id.font_right_arrow);
+        leftFontButton = findViewById(R.id.font_left_arrow);
+        rightColorButton = findViewById(R.id.color_right_arrow);
+        leftColorButton = findViewById(R.id.color_left_arrow);
+        rightStyleButton = findViewById(R.id.style_right_arrow);
+        leftStyleButton = findViewById(R.id.style_left_arrow);
         backButton.setVisibility(View.GONE);
-        rightButton.setVisibility(View.GONE);
-        leftButton.setVisibility(View.GONE);
+        rightFontButton.setVisibility(View.GONE);
+        leftFontButton.setVisibility(View.GONE);
+        rightColorButton.setVisibility(View.GONE);
+        leftColorButton.setVisibility(View.GONE);
+        rightStyleButton.setVisibility(View.GONE);
+        leftStyleButton.setVisibility(View.GONE);
 
         // Color Screen
         colorText = findViewById(R.id.color_text);
@@ -64,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
         startButton.setVisibility(View.GONE);
         backButton.setVisibility(View.VISIBLE);
         colorText.setVisibility(View.VISIBLE);
-        rightButton.setVisibility(View.VISIBLE);
-        leftButton.setVisibility(View.VISIBLE);
+        rightColorButton.setVisibility(View.VISIBLE);
+        leftColorButton.setVisibility(View.VISIBLE);
     }
 
     public void onFontClick(View view){
@@ -75,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
         startButton.setVisibility(View.GONE);
         backButton.setVisibility(View.VISIBLE);
         fontText.setVisibility(View.VISIBLE);
-        rightButton.setVisibility(View.VISIBLE);
-        leftButton.setVisibility(View.VISIBLE);
+        rightFontButton.setVisibility(View.VISIBLE);
+        leftFontButton.setVisibility(View.VISIBLE);
     }
 
     public void onStyleClick(View view){
@@ -86,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
         startButton.setVisibility(View.GONE);
         backButton.setVisibility(View.VISIBLE);
         styleText.setVisibility(View.VISIBLE);
-        rightButton.setVisibility(View.VISIBLE);
-        leftButton.setVisibility(View.VISIBLE);
+        rightStyleButton.setVisibility(View.VISIBLE);
+        leftStyleButton.setVisibility(View.VISIBLE);
     }
 
     public void onBackClick(View view){
@@ -99,8 +113,12 @@ public class MainActivity extends AppCompatActivity {
         colorText.setVisibility(View.GONE);
         fontText.setVisibility(View.GONE);
         styleText.setVisibility(View.GONE);
-        rightButton.setVisibility(View.GONE);
-        leftButton.setVisibility(View.GONE);
+        rightFontButton.setVisibility(View.GONE);
+        leftFontButton.setVisibility(View.GONE);
+        rightColorButton.setVisibility(View.GONE);
+        leftColorButton.setVisibility(View.GONE);
+        rightStyleButton.setVisibility(View.GONE);
+        leftStyleButton.setVisibility(View.GONE);
     }
 
 }
