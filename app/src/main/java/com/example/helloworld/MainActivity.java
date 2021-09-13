@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         rightSizeButton.setVisibility(View.GONE);
         leftSizeButton.setVisibility(View.GONE);
         rightColorButton.setVisibility(View.GONE);
+        startButton.setVisibility(View.GONE);
         leftColorButton.setVisibility(View.GONE);
         rightStyleButton.setVisibility(View.GONE);
         leftStyleButton.setVisibility(View.GONE);
@@ -104,15 +105,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void changeFont(View view){
         if(FontCounter==1){
-            helloText.setTextSize(50);
+            helloText.setTextSize(70);
             sizeText.setText("Medium");
         }
         else if(FontCounter==2){
-            helloText.setTextSize(70);
+            helloText.setTextSize(90);
             sizeText.setText("Large");
         }
         else if(FontCounter==3){
-            helloText.setTextSize(30);
+            helloText.setTextSize(50);
             sizeText.setText("Small");
         }
     }
